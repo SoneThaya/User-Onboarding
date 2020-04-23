@@ -13,10 +13,12 @@ const Form = (props) => {
     errors,
   } = props
 
+  console.log(values)
+
   return (
     <Styles>
     <form className='friend container'>
-      <h2>Friend Form</h2>
+      <h1>Friend Form</h1>
       {/* 🔥 STEP 10 - SHOW A BUNCH OF ERRORS */}
       <div className='errors'>
         
@@ -46,15 +48,16 @@ const Form = (props) => {
             value={values.password}
             onChange={onInputChange}
             name='password'
-            type='text'
+            type='password'
           /></label>
      
 
       {/* ////////// CHECKBOXES ////////// */}
-      <label><input
-        
+        <label><input
+          
+        checked={values.termsOfService}
         onChange={onCheckboxChange}
-        name='terms'
+        name='termsOfService'
         type="checkbox" />Accept Terms of Service</label>
       
 

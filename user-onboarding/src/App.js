@@ -39,6 +39,7 @@ const formSchema = yup.object().shape({
   termsOfService: yup
     .boolean()
     .oneOf([true], "You must accept Terms and Conditions")
+    .required('Required')
 })
 
 function App() {
@@ -76,8 +77,11 @@ function App() {
 
   useEffect(() => {
     formSchema.isValid(formValues)
+      
       .then(valid => {
+        
         setFormDisabled(!valid)
+       
       })
   }, [formValues])
 
@@ -88,7 +92,7 @@ function App() {
       username: formValues.username,
       email: formValues.email,
       password: formValues.password,
-      terms: formValues.termsOfService,
+      termsOfService: formValues.termsOfService,
     }
 
     postUser(newUser)
@@ -109,9 +113,10 @@ function App() {
         })
       })
       .catch(err => {
+        console.log(err)
         setFormErrors({
           ...formErrors,
-          [name]: value,
+          [name]: err.errors[0],
         })
       })
     
@@ -127,7 +132,7 @@ function App() {
 
     setFormValues({
       ...formValues,
-      terms: formValues.termsOfService,
+      // terms: formValues.termsOfService,
       [name]: isChecked,
     })
   }
@@ -142,7 +147,7 @@ function App() {
         disabled={formDisabled}
         errors={formErrors}
       />
-
+      
       {
         users.map(user => {
           return (

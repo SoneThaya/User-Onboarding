@@ -7,10 +7,10 @@ function User({props}) {
 
   return (
     <div className="user-container">
-      <img src={props.avatar} alt={props.first_name} />
-      <h2>name: {props.first_name} {props.last_name}</h2>
-      <p>email: {props.email}</p>
-      <p>password: {props.password}</p>
+    
+      <h2>Name: {props.username}</h2>
+      <p>Email: {props.email}</p>
+      <p>Password: {props.password}</p>
       <p>Terms: {props.termsOfService ? 'yes' : 'no'}</p>
     </div>
   )

@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const Styles = styled.div`
   h1 {
     text-align: center;
+    color: blue;
+  }
+  p {
     color: red;
   }
 
