@@ -12,7 +12,7 @@ export const Styles = styled.div`
   form {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 260px;
     margin: 100px auto;
     border: 1px solid red;
     padding: 10px;
