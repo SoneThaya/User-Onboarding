@@ -14,7 +14,9 @@ export const Styles = styled.div`
     flex-direction: column;
     width: 25%;
     margin: 100px auto;
-  
+    border: 1px solid red;
+    padding: 10px;
+    box-shadow: 10px 10px 5px grey;
 
     label {
       margin-top: 20px;
@@ -26,6 +28,9 @@ export const Styles = styled.div`
     .error {
       color: red;
       font-size: .6em;
+    }
+    &:hover {
+      box-shadow: 0 0 11px rgba(33,33,33,.2); 
     }
   }
 
