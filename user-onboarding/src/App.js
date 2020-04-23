@@ -132,7 +132,6 @@ function App() {
 
     setFormValues({
       ...formValues,
-      // terms: formValues.termsOfService,
       [name]: isChecked,
     })
   }
@@ -151,10 +150,10 @@ function App() {
       {
         users.map(user => {
           return (
-            <User key={user.id} props={user} />
+            <pre>{JSON.stringify(user, null, 2)}</pre>
           )
         })
-     }
+      }
       
     </div>
   );

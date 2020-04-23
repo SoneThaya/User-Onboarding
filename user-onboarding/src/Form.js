@@ -50,7 +50,6 @@ const Form = (props) => {
             name='password'
             type='password'
           /></label>
-     
 
       {/* ////////// CHECKBOXES ////////// */}
         <label><input
@@ -58,8 +57,7 @@ const Form = (props) => {
         checked={values.termsOfService}
         onChange={onCheckboxChange}
         name='termsOfService'
-        type="checkbox" />Accept Terms of Service</label>
-      
+        type="checkbox" />Accept Terms of Service</label>    
 
       {/* ////////// DISABLED PROP NEW FOR TODAY ////////// */}
       <button onClick={onSubmit} disabled={disabled}>submit</button>
@@ -68,6 +66,4 @@ const Form = (props) => {
   )
 }
   
-
-
 export default Form
